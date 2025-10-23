@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-10-23T04:39:49.159Z",
+    "end": "2025-10-23T04:40:37.297Z",
+    "duration": 48138,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "042adacf-e13e-42b5-9713-23396a83031c",
+      "title": "",
+      "fullFile": "cypress\\e2e\\portfolio-test\\responsive.layout.js",
+      "file": "cypress\\e2e\\portfolio-test\\responsive.layout.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "17ba8a21-963e-457b-afb0-fd72d88cb96e",
+          "title": "Element Visibility and Overflow Check at Various Screen Sizes",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should not have horizontal overflow and display main elements on 1920x1080",
+              "fullTitle": "Element Visibility and Overflow Check at Various Screen Sizes Should not have horizontal overflow and display main elements on 1920x1080",
+              "timedOut": null,
+              "duration": 36888,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport(width, height);\n// Cek overflow horizontal\ncy.window().then(win => {\n  const doc = win.document.documentElement;\n  const hasOverflowX = doc.scrollWidth > doc.clientWidth;\n  expect(hasOverflowX, `Overflow detected at ${width}x${height}`).to.be.false;\n});\n// Cek visibility elemen utama\ncy.get('header').should('be.visible');\ncy.get('main').should('be.visible');\ncy.get('footer').should('be.visible');",
+              "err": {},
+              "uuid": "7690d75a-c724-4f40-a80e-e3765c5c8743",
+              "parentUUID": "17ba8a21-963e-457b-afb0-fd72d88cb96e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should not have horizontal overflow and display main elements on 1024x768",
+              "fullTitle": "Element Visibility and Overflow Check at Various Screen Sizes Should not have horizontal overflow and display main elements on 1024x768",
+              "timedOut": null,
+              "duration": 5120,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport(width, height);\n// Cek overflow horizontal\ncy.window().then(win => {\n  const doc = win.document.documentElement;\n  const hasOverflowX = doc.scrollWidth > doc.clientWidth;\n  expect(hasOverflowX, `Overflow detected at ${width}x${height}`).to.be.false;\n});\n// Cek visibility elemen utama\ncy.get('header').should('be.visible');\ncy.get('main').should('be.visible');\ncy.get('footer').should('be.visible');",
+              "err": {},
+              "uuid": "d24ca9cb-a866-4872-af21-dc15b6011a0d",
+              "parentUUID": "17ba8a21-963e-457b-afb0-fd72d88cb96e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should not have horizontal overflow and display main elements on 375x667",
+              "fullTitle": "Element Visibility and Overflow Check at Various Screen Sizes Should not have horizontal overflow and display main elements on 375x667",
+              "timedOut": null,
+              "duration": 4715,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport(width, height);\n// Cek overflow horizontal\ncy.window().then(win => {\n  const doc = win.document.documentElement;\n  const hasOverflowX = doc.scrollWidth > doc.clientWidth;\n  expect(hasOverflowX, `Overflow detected at ${width}x${height}`).to.be.false;\n});\n// Cek visibility elemen utama\ncy.get('header').should('be.visible');\ncy.get('main').should('be.visible');\ncy.get('footer').should('be.visible');",
+              "err": {},
+              "uuid": "b51617a8-8183-41f6-90eb-e684f64774e0",
+              "parentUUID": "17ba8a21-963e-457b-afb0-fd72d88cb96e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7690d75a-c724-4f40-a80e-e3765c5c8743",
+            "d24ca9cb-a866-4872-af21-dc15b6011a0d",
+            "b51617a8-8183-41f6-90eb-e684f64774e0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 46723,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.0"
+    }
+  }
+}

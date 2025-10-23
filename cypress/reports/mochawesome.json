@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-10-23T04:36:58.053Z",
+    "end": "2025-10-23T04:37:28.184Z",
+    "duration": 30131,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "eaa6b9bf-f444-424b-94c4-1419159050cb",
+      "title": "",
+      "fullFile": "cypress\\e2e\\portfolio-test\\certificates_section.js",
+      "file": "cypress\\e2e\\portfolio-test\\certificates_section.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fd950ca0-9738-476a-ad76-7c9d43df9b35",
+          "title": "Certificates Section Functionality Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should scroll to the right when the Right Arrow is clicked",
+              "fullTitle": "Certificates Section Functionality Test Should scroll to the right when the Right Arrow is clicked",
+              "timedOut": null,
+              "duration": 21167,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#scrollContainer').then($before => {\n  const initialScroll = $before[0].scrollLeft;\n  cy.get('#scrollRight').click();\n  cy.wait(500);\n  cy.get('#scrollContainer').should($after => {\n    expect($after[0].scrollLeft).to.be.greaterThan(initialScroll);\n  });\n});",
+              "err": {},
+              "uuid": "f020335b-d514-49eb-9ff3-c3da288c538e",
+              "parentUUID": "fd950ca0-9738-476a-ad76-7c9d43df9b35",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should scroll to the left when the Left Arrow is clicked",
+              "fullTitle": "Certificates Section Functionality Test Should scroll to the left when the Left Arrow is clicked",
+              "timedOut": null,
+              "duration": 4919,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#scrollContainer').then($container => {\n  const container = $container[0];\n  // scroll to the right first\n  cy.get('#scrollRight').click();\n  cy.wait(800);\n  cy.window().then(() => {\n    const scrolledRight = container.scrollLeft;\n    expect(scrolledRight).to.be.greaterThan(0);\n    // scroll to the left\n    cy.get('#scrollLeft').click();\n    cy.wait(800);\n    cy.window().then(() => {\n      const afterScrollLeft = container.scrollLeft;\n      expect(afterScrollLeft).to.be.lessThan(scrolledRight);\n    });\n  });\n});",
+              "err": {},
+              "uuid": "a694f09d-a594-45c2-8f12-5d35e38435df",
+              "parentUUID": "fd950ca0-9738-476a-ad76-7c9d43df9b35",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should open Google Drive in new tab when the Link is clicked",
+              "fullTitle": "Certificates Section Functionality Test Should open Google Drive in new tab when the Link is clicked",
+              "timedOut": null,
+              "duration": 904,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('View Full Certificate').click().should('have.attr', 'target', '_blank').and('have.attr', 'href').and('include', 'https://drive.google.com/drive/folders/148E7gaYqkdEac74oWAf-233ZMsZYgu45?usp=sharing');",
+              "err": {},
+              "uuid": "ca35c183-7608-4932-a675-9ea54e033b59",
+              "parentUUID": "fd950ca0-9738-476a-ad76-7c9d43df9b35",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f020335b-d514-49eb-9ff3-c3da288c538e",
+            "a694f09d-a594-45c2-8f12-5d35e38435df",
+            "ca35c183-7608-4932-a675-9ea54e033b59"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 26990,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.0"
+    }
+  }
+}

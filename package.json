@@ -12,6 +12,9 @@
   "author": "azzahra",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^15.3.0"
+    "cypress": "^15.3.0",
+    "mochawesome": "^7.1.4",
+    "mochawesome-merge": "^4.4.1",
+    "mochawesome-report-generator": "^6.3.0"
   }
 }

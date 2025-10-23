@@ -1,0 +1,184 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-10-23T04:38:58.147Z",
+    "end": "2025-10-23T04:39:47.665Z",
+    "duration": 49518,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e0ce9950-8eeb-4f8a-a837-9274bc9d4965",
+      "title": "",
+      "fullFile": "cypress\\e2e\\portfolio-test\\navigation_verify.js",
+      "file": "cypress\\e2e\\portfolio-test\\navigation_verify.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d2af5cf1-c00d-41cc-b95c-1629307b9517",
+          "title": "Navigation Verification Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should Scroll to Home Section when Azzahra Portfolio is clicked",
+              "fullTitle": "Navigation Verification Test Should Scroll to Home Section when Azzahra Portfolio is clicked",
+              "timedOut": null,
+              "duration": 35951,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.title-site').click();\ncy.url().should('include', '#home');\ncy.get('#home').should('be.visible');",
+              "err": {},
+              "uuid": "c3c95c4a-f707-457b-90b0-edf18ebda768",
+              "parentUUID": "d2af5cf1-c00d-41cc-b95c-1629307b9517",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [
+            {
+              "uuid": "aee3e9c9-d742-42a8-9c10-fe5dd4bcaafd",
+              "title": "Navbar Links",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Should scroll correctly to section target - Navbar Menu",
+                  "fullTitle": "Navigation Verification Test Navbar Links Should scroll correctly to section target - Navbar Menu",
+                  "timedOut": null,
+                  "duration": 5497,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.verifyMenuScroll('Home', '#home', 'nav');\ncy.verifyMenuScroll('About Me', '#aboutme', 'nav');\ncy.verifyMenuScroll('Projects', '#projects', 'nav');\ncy.verifyMenuScroll('Certificates', '#certificates', 'nav');\ncy.verifyMenuScroll('Contact', '#contact', 'nav');",
+                  "err": {},
+                  "uuid": "21e42b19-a06e-418c-af2b-ba467f043f51",
+                  "parentUUID": "aee3e9c9-d742-42a8-9c10-fe5dd4bcaafd",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "21e42b19-a06e-418c-af2b-ba467f043f51"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 5497,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "098f1352-ad70-43ad-a89e-fabc396cd51c",
+              "title": "Footer Links",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Should scroll correctly to section target - Footer Menu",
+                  "fullTitle": "Navigation Verification Test Footer Links Should scroll correctly to section target - Footer Menu",
+                  "timedOut": null,
+                  "duration": 5625,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('footer').scrollIntoView();\ncy.wait(500);\ncy.verifyMenuScroll('Home', '#home', 'footer');\ncy.verifyMenuScroll('About Me', '#aboutme', 'footer');\ncy.verifyMenuScroll('Projects', '#projects', 'footer');\ncy.verifyMenuScroll('Contact', '#contact', 'footer');",
+                  "err": {},
+                  "uuid": "839e629a-0f69-4d9b-97cf-d61ba5dab7d8",
+                  "parentUUID": "098f1352-ad70-43ad-a89e-fabc396cd51c",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "839e629a-0f69-4d9b-97cf-d61ba5dab7d8"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 5625,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [
+            "c3c95c4a-f707-457b-90b0-edf18ebda768"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 35951,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.0"
+    }
+  }
+}

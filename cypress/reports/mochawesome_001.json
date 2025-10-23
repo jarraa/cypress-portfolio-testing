@@ -1,0 +1,239 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-10-23T04:37:30.196Z",
+    "end": "2025-10-23T04:38:22.937Z",
+    "duration": 52741,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d8c75f85-4ebc-4560-8722-535fb0c0bc74",
+      "title": "",
+      "fullFile": "cypress\\e2e\\portfolio-test\\contact_section.js",
+      "file": "cypress\\e2e\\portfolio-test\\contact_section.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d4dfae5d-c44f-449a-943d-a72c9d577bdf",
+          "title": "Contact Section Functionality Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "141025f5-291b-4fe1-be88-5bdd6ede8abd",
+              "title": "Contact Links",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Should open Azzahra LinkedIn Profile in new Tab when the LinkedIn Icon is clicked",
+                  "fullTitle": "Contact Section Functionality Test Contact Links Should open Azzahra LinkedIn Profile in new Tab when the LinkedIn Icon is clicked",
+                  "timedOut": null,
+                  "duration": 28647,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('.linkedin-icon').click().should('have.attr', 'target', '_blank').and('have.attr', 'href').and('include', 'https://www.linkedin.com/in/azzahra-auliya-rahmah-321154148');",
+                  "err": {},
+                  "uuid": "4677b1d1-14ca-423e-a3a2-ea9108440eac",
+                  "parentUUID": "141025f5-291b-4fe1-be88-5bdd6ede8abd",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Should open Azzahra Github Profile in new Tab when the Github Icon is clicked",
+                  "fullTitle": "Contact Section Functionality Test Contact Links Should open Azzahra Github Profile in new Tab when the Github Icon is clicked",
+                  "timedOut": null,
+                  "duration": 1097,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('.github-icon').click().should('have.attr', 'target', '_blank').and('have.attr', 'href').and('include', 'https://github.com/jarraa');",
+                  "err": {},
+                  "uuid": "9c47eace-3d08-4f52-b47b-a5060da7fab5",
+                  "parentUUID": "141025f5-291b-4fe1-be88-5bdd6ede8abd",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Should open Azzahra Portfolio in new Tab when the Portfolio is clicked",
+                  "fullTitle": "Contact Section Functionality Test Contact Links Should open Azzahra Portfolio in new Tab when the Portfolio is clicked",
+                  "timedOut": null,
+                  "duration": 3204,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.contains('View Full Portfolio').click().should('have.attr', 'target', '_blank').and('have.attr', 'href').and('include', 'https://portfolioazzahraauliya.my.canva.site/portfolioazzahraauliyar');",
+                  "err": {},
+                  "uuid": "003d2454-5206-4f29-8405-476e652145bd",
+                  "parentUUID": "141025f5-291b-4fe1-be88-5bdd6ede8abd",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "4677b1d1-14ca-423e-a3a2-ea9108440eac",
+                "9c47eace-3d08-4f52-b47b-a5060da7fab5",
+                "003d2454-5206-4f29-8405-476e652145bd"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 32948,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "20495865-2e10-4882-9879-cb6b085dada2",
+              "title": "Form Submit",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Should submit the form and display reCAPTCHA page before sending the message",
+                  "fullTitle": "Contact Section Functionality Test Form Submit Should submit the form and display reCAPTCHA page before sending the message",
+                  "timedOut": null,
+                  "duration": 12646,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit('https://azzahra-portfolio-site.vercel.app/#contact', {\n  timeout: 120000\n});\ncy.closeWelcomeModal();\ncy.get('#name').type('Shifa Amalia').should('have.value', 'Shifa Amalia');\ncy.get('#email').type('shifa1616@gmail.com').should('have.value', 'shifa1616@gmail.com');\ncy.get('#message').type('Hello! I’m testing this contact form.').should('have.value', 'Hello! I’m testing this contact form.');\ncy.get('button[type=\"submit\"]').click();\ncy.url().should('include', 'formspree');",
+                  "err": {},
+                  "uuid": "a86b893f-0160-4ece-8506-9f7d3242f61b",
+                  "parentUUID": "20495865-2e10-4882-9879-cb6b085dada2",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Should allow typing and simulate successful form submission",
+                  "fullTitle": "Contact Section Functionality Test Form Submit Should allow typing and simulate successful form submission",
+                  "timedOut": null,
+                  "duration": 45,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit('https://azzahra-portfolio-site.vercel.app/#contact', {\n  timeout: 120000\n});\ncy.closeWelcomeModal();\n// Buat endpoint palsu di lokal\ncy.intercept('POST', '/mock-endpoint', {\n  statusCode: 200,\n  body: {\n    ok: true,\n    message: 'Message sent successfully!'\n  }\n}).as('formSubmit');\ncy.get('#name').type('Shifa A').should('have.value', 'Shifa A');\ncy.get('#email').type('shifaaa@gmail.com').should('have.value', 'shifaaa@gmail.com');\ncy.get('#message').type('Hello! This is a test message.').should('have.value', 'Hello! This is a test message.');\n// Ganti action form ke endpoint lokal yang sudah di-mock\ncy.get('form#contactForm').invoke('attr', 'action', '/mock-endpoint').invoke('attr', 'target', '_self');\ncy.get('button[type=\"submit\"]').click({\n  force: true\n});\n// Tunggu request ke endpoint mock\ncy.wait('@formSubmit').its('response.statusCode').should('eq', 200);",
+                  "err": {},
+                  "uuid": "be5b1686-2977-4c7a-88a7-ca71e68eae22",
+                  "parentUUID": "20495865-2e10-4882-9879-cb6b085dada2",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Should allow clearing the form fields and cannot submit when fields are empty",
+                  "fullTitle": "Contact Section Functionality Test Form Submit Should allow clearing the form fields and cannot submit when fields are empty",
+                  "timedOut": null,
+                  "duration": 5203,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit('https://azzahra-portfolio-site.vercel.app/#contact', {\n  timeout: 120000\n});\ncy.closeWelcomeModal();\ncy.get('#name').type('Shifa').should('have.value', 'Shifa').clear().should('have.value', '');\ncy.get('#email').type('shifa16@gmail.com').should('have.value', 'shifa16@gmail.com').clear().should('have.value', '');\ncy.get('#message').type('Hello!').should('have.value', 'Hello!').clear().should('have.value', '');\ncy.get('button[type=\"submit\"]').click();",
+                  "err": {},
+                  "uuid": "66153dd9-850c-4312-b608-fe7fc3280399",
+                  "parentUUID": "20495865-2e10-4882-9879-cb6b085dada2",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "a86b893f-0160-4ece-8506-9f7d3242f61b",
+                "be5b1686-2977-4c7a-88a7-ca71e68eae22",
+                "66153dd9-850c-4312-b608-fe7fc3280399"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 17894,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.0"
+    }
+  }
+}

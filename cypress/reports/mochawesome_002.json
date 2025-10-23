@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-10-23T04:38:24.708Z",
+    "end": "2025-10-23T04:38:56.694Z",
+    "duration": 31986,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f3d0f136-a0b0-4ebe-b2d6-89742c0f41f3",
+      "title": "",
+      "fullFile": "cypress\\e2e\\portfolio-test\\home_section.js",
+      "file": "cypress\\e2e\\portfolio-test\\home_section.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fcf47c11-a8e3-4960-a216-d8814c011a5a",
+          "title": "Home Section Functionality Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should scroll to Projects Section when the View Project Button is clicked",
+              "fullTitle": "Home Section Functionality Test should scroll to Projects Section when the View Project Button is clicked",
+              "timedOut": null,
+              "duration": 26849,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('View Projects').scrollIntoView().click({\n  force: true\n});\ncy.url().should('include', '#projects');\ncy.get('#projects').should('be.visible');",
+              "err": {},
+              "uuid": "3bb88ef4-f784-41ab-8938-007dcfe304be",
+              "parentUUID": "fcf47c11-a8e3-4960-a216-d8814c011a5a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should download CV successfully when the Download CV button is clicked",
+              "fullTitle": "Home Section Functionality Test should download CV successfully when the Download CV button is clicked",
+              "timedOut": null,
+              "duration": 3197,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('a[href$=\"attachment/CV-IT_Azzahra Auliya Rahmah.pdf\"]').scrollIntoView().click({\n  force: true\n}).should('have.attr', 'download').and('include', 'Azzahra_Auliya_Rahmah_CV.pdf');",
+              "err": {},
+              "uuid": "4f7a9bbb-9546-4df3-9079-ff650e26e998",
+              "parentUUID": "fcf47c11-a8e3-4960-a216-d8814c011a5a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3bb88ef4-f784-41ab-8938-007dcfe304be",
+            "4f7a9bbb-9546-4df3-9079-ff650e26e998"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 30046,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.0"
+    }
+  }
+}

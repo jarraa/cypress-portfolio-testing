@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-10-23T04:42:12.759Z",
+    "end": "2025-10-23T04:42:41.883Z",
+    "duration": 29124,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4fe55d6e-748b-403a-9835-c8c9c4fce0ae",
+      "title": "",
+      "fullFile": "cypress\\e2e\\portfolio-test\\welcome_modal.js",
+      "file": "cypress\\e2e\\portfolio-test\\welcome_modal.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "10078251-92d9-49ba-92a1-0e0c52de976a",
+          "title": "Welcome Modal Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Displays entered name in welcome message",
+              "fullTitle": "Welcome Modal Test Displays entered name in welcome message",
+              "timedOut": null,
+              "duration": 27261,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#welcomeModal').should('be.visible');\ncy.get('#nameInput').type('shifa');\ncy.get('#submitName').click();\ncy.get('#welcomeModal').should('not.be.visible');\ncy.get('#username').should('contain', 'Shifa');",
+              "err": {},
+              "uuid": "2aa1752d-eb89-46ef-a709-b2dfdd604045",
+              "parentUUID": "10078251-92d9-49ba-92a1-0e0c52de976a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Shows error when name field is empty",
+              "fullTitle": "Welcome Modal Test Shows error when name field is empty",
+              "timedOut": null,
+              "duration": 539,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#welcomeModal').should('be.visible');\ncy.get('#submitName').click();\ncy.on('window:alert', alertText => {\n  expect(alertText).to.equal('Please enter your name!');\n});",
+              "err": {},
+              "uuid": "0d44fe02-caf7-4525-b606-4299999ab68e",
+              "parentUUID": "10078251-92d9-49ba-92a1-0e0c52de976a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2aa1752d-eb89-46ef-a709-b2dfdd604045",
+            "0d44fe02-caf7-4525-b606-4299999ab68e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 27800,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.0"
+    }
+  }
+}
