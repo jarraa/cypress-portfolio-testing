@@ -1,0 +1,10 @@
+# dependencies
+node_modules/
+
+# Cypress artifacts
+cypress/screenshots/
+cypress/videos/
+
+# system files
+.DS_Store
+Thumbs.db
