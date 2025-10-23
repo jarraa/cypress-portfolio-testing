@@ -1,0 +1,17 @@
+{
+  "name": "belajar-qa-cypress",
+  "version": "1.0.0",
+  "description": "Automation Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:open": "npx cypress open",
+    "cypress:run": "npx cypress run",
+    "cypress-headed": "npx cypress run --headed"
+  },
+  "author": "azzahra",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^15.3.0"
+  }
+}
